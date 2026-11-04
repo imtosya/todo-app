@@ -7,7 +7,11 @@ todos = []
 
 @app.get("/health")
 def health():
-    return jsonify(status="OK")
+    return jsonify(status="ok")
+
+@app.get("/version")
+def version():
+    return jsonify(version="2")
 
 
 @app.get("/todos")
